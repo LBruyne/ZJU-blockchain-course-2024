@@ -5,7 +5,7 @@ async function main() {
   const buyMyRoom = await BuyMyRoom.deploy();
   await buyMyRoom.deployed();
 
-  console.log(`BorrowYourCar deployed to ${buyMyRoom.address}`);
+  console.log(`BuyMyRoom deployed to ${buyMyRoom.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

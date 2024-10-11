@@ -10,16 +10,16 @@ describe("Test", function () {
     // Contracts are deployed using the first signer/account by default
     const [owner, otherAccount] = await ethers.getSigners();
 
-    const BorrowYourCar = await ethers.getContractFactory("BorrowYourCar");
-    const borrowYourCar = await BorrowYourCar.deploy();
+    const BuyMyRoom = await ethers.getContractFactory("BuyMyRoom");
+    const buyMyRoom = await BuyMyRoom.deploy();
 
-    return { borrowYourCar, owner, otherAccount };
+    return { buyMyRoom, owner, otherAccount };
   }
 
   describe("Deployment", function () {
     it("Should return hello world", async function () {
-      const { borrowYourCar } = await loadFixture(deployFixture);
-      expect(await borrowYourCar.helloworld()).to.equal("hello world");
+      const { buyMyRoom } = await loadFixture(deployFixture);
+      expect(await buyMyRoom.helloworld()).to.equal("hello world");
     });
   });
 });
